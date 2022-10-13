@@ -1,0 +1,41 @@
+<mvc:View
+    controllerName="chocoapp.controller.Detail"
+    xmlns:layout="sap.ui.layout"
+	xmlns:m="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.uxap"
+    height="100%">
+    <ObjectPageLayout
+        id="detail"
+        showTitleInHeaderContent="true" >
+        <headerTitle>
+            <ObjectPageHeader
+                id="detailInfoHeader"
+                objectTitle="{product>наименование}"
+                objectSubtitle="{product>компания}"
+                isObjectTitleAlwaysVisible="false"
+                isObjectSubtitleAlwaysVisible="false"
+                showPlaceholder="true">
+                <actions>
+                    <m:Button text="{i18n>backButtonText}" press=".onNavBack" class="myCustomButton" />
+                </actions>
+            </ObjectPageHeader>
+        </headerTitle>
+        <headerContent>
+            <layout:VerticalLayout>
+                <m:ObjectStatus title="{i18n>priceTitle}" text="{product>цена} {i18n>currencyUnit}" />
+                <m:ObjectStatus title="{i18n>caloriesTitle}" text="{product>калорийность} {i18n>caloriesUnit}" />
+            </layout:VerticalLayout>
+        </headerContent>
+        <ObjectPageSection
+            titleUppercase="false">
+            <subSections>
+                <ObjectPageSubSection title="{i18n>descriptionTitle}">
+                    <layout:HorizontalLayout>
+                        <m:Text text="{product>описание}" />
+                    </layout:HorizontalLayout>
+                </ObjectPageSubSection>
+            </subSections>    
+        </ObjectPageSection>
+    </ObjectPageLayout>
+</mvc:View>

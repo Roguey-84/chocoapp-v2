@@ -1,0 +1,18 @@
+html[dir='ltr'] .myAppDemoWT .myCustomButton.sapMBtn {
+    margin-right: 0.125rem;
+}
+  
+html[dir='rtl'] .myAppDemoWT .myCustomButton.sapMBtn {
+    margin-left: 0.125rem;
+}
+
+.myAppDemoWT .myCustomText {
+    display: inline-block;
+    font-weight: bold;
+}
+
+.myAppDemoWT .customPanel.sapMITBFilterPositive {
+    border-width: 1px;
+    border-style: solid;
+    box-shadow: 0 0 4px rgb(50, 190, 167);
+}
